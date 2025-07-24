@@ -98,7 +98,7 @@ function App() {
 
     // Redirect to WhatsApp after random delay
     const redirectTimer = setTimeout(() => {
-      const message = 'Quiero el bono del 20%';
+      const message = 'Hola quiero mas informacion y mi bono del 50%';
       const whatsappUrl = `https://wa.me/${randomPhoneNumber}?text=${encodeURIComponent(message)}`;
       
       // Redirect without additional tracking
