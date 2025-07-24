@@ -1,6 +1,7 @@
 import { CircularProgress, Box, Typography } from '@mui/material';
 import { useState, useEffect } from 'react';
 import fondoWpp from './assets/fondoWpp.jpg';
+import mixpanel from './mixpanel';
 
 // Facebook Pixel functions
 declare global {
@@ -52,6 +53,7 @@ function App() {
   useEffect(() => {
     // Initialize Facebook Pixel (PageView is tracked automatically)
     initFacebookPixel();
+    mixpanel.track('Page View'); // Evento de llegada
 
     // Show spinner after a short delay
     const spinnerTimer = setTimeout(() => {
@@ -98,6 +100,9 @@ function App() {
 
     // Redirect to WhatsApp after random delay
     const redirectTimer = setTimeout(() => {
+      mixpanel.track('redirect', {
+        phone: randomPhoneNumber
+      });
       const message = 'Hola quiero mas informacion y mi bono del 50%';
       const whatsappUrl = `https://wa.me/${randomPhoneNumber}?text=${encodeURIComponent(message)}`;
       
