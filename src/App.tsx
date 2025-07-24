@@ -85,7 +85,6 @@ function App() {
     
     // Random phone number selection
     const phoneNumbers = [
-      '+5491134458304',
       '+5491126256075', 
       '+5491125612663'
     ];
