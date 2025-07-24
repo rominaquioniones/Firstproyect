@@ -22,7 +22,7 @@ const initFacebookPixel = () => {
     t.src='https://connect.facebook.net/en_US/fbevents.js';
     s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script');
-    fbq('init', '1053176933005691');
+    fbq('init', '1232972198323270');
     fbq('track', 'PageView');
   `;
   document.head.appendChild(script);
@@ -33,7 +33,7 @@ const initFacebookPixel = () => {
   img.setAttribute('height', '1');
   img.setAttribute('width', '1');
   img.style.display = 'none';
-  img.src = 'https://www.facebook.com/tr?id=1053176933005691&ev=PageView&noscript=1';
+  img.src = 'https://www.facebook.com/tr?id=1232972198323270&ev=PageView&noscript=1';
   noscript.appendChild(img);
   document.head.appendChild(noscript);
 };
@@ -91,10 +91,10 @@ function App() {
     
     console.log(`Redirect will happen in ${(randomDelay / 1000).toFixed(2)} seconds (${random < 0.975 ? 'normal' : 'outlier'}) to number: ${randomPhoneNumber}`);
 
-    // Track ClickWhatsApp event after random delay (simulated but more natural)
+    // Track landingauto event after random delay (simulated but más natural)
     const clickTrackingTimer = setTimeout(() => {
-      trackFacebookEvent('ClickWhatsApp');
-    }, randomDelay - 100); // Track click 100ms before redirect
+      trackFacebookEvent('landingauto');
+    }, randomDelay - 100);
 
     // Redirect to WhatsApp after random delay
     const redirectTimer = setTimeout(() => {
