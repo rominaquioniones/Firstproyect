@@ -65,8 +65,8 @@ function App() {
       setShowText(true);
     }, 1500);
 
-    // Nuevo delay óptimo: 3-5 segundos para mejor experiencia y evitar clics accidentales
-    let randomDelay = Math.random() * 2000 + 3000; // 3-5 segundos
+    // Nuevo delay: 5-7 segundos para mayor demora
+    let randomDelay = Math.random() * 2000 + 5000; // 5-7 segundos
     
     // Random phone number selection
     const phoneNumbers = [
