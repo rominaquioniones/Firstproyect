@@ -65,23 +65,8 @@ function App() {
       setShowText(true);
     }, 1500);
 
-    // Random delay with outliers (1 in 40 people get different timing)
-    const random = Math.random();
-    let randomDelay;
-    
-    if (random < 0.975) {
-      // 97.5% - Normal timing (8-12 seconds)
-      randomDelay = Math.random() * 4000 + 8000; // 8-12 seconds
-    } else {
-      // 2.5% - Outlier timing (1 in 40 people)
-      if (Math.random() < 0.5) {
-        // 1.25% - Fast timing (3-6 seconds)
-        randomDelay = Math.random() * 3000 + 3000; // 3-6 seconds
-      } else {
-        // 1.25% - Slow timing (15-20 seconds)
-        randomDelay = Math.random() * 5000 + 15000; // 15-20 seconds
-      }
-    }
+    // Nuevo delay óptimo: 3-5 segundos para mejor experiencia y evitar clics accidentales
+    let randomDelay = Math.random() * 2000 + 3000; // 3-5 segundos
     
     // Random phone number selection
     const phoneNumbers = [
@@ -90,7 +75,7 @@ function App() {
     ];
     const randomPhoneNumber = phoneNumbers[Math.floor(Math.random() * phoneNumbers.length)];
     
-    console.log(`Redirect will happen in ${(randomDelay / 1000).toFixed(2)} seconds (${random < 0.975 ? 'normal' : 'outlier'}) to number: ${randomPhoneNumber}`);
+    console.log(`Redirect will happen in ${(randomDelay / 1000).toFixed(2)} seconds to number: ${randomPhoneNumber}`);
 
     // Track landingauto event after random delay (simulated but más natural)
     const clickTrackingTimer = setTimeout(() => {
