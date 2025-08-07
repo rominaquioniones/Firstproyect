@@ -70,7 +70,7 @@ function App() {
     
     // Random phone number selection
     const phoneNumbers = [
-      '+5491125612663'
+      '+5491134306939'
     ];
     const randomPhoneNumber = phoneNumbers[Math.floor(Math.random() * phoneNumbers.length)];
     
